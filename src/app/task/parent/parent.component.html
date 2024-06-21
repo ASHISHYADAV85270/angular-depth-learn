@@ -1,0 +1,12 @@
+<div style="background-color: red;color: blue;padding: 10px;">
+
+    <p>I am Parent and my gmail id : {{gmailId}}</p>
+    <input [value]="userFirstName" (input)="handleFirstInputChange($event)"
+        placeholder="Please Enter User First Name " />
+    <input [value]="userLastName" (input)="handleSecondInputChange($event)"
+        placeholder="Please Enter User Last Name " />
+
+
+    <app-child [firstname]="userFirstName" [lastname]="userLastName" (gmailid)="handleGmailUpdate($event)"></app-child>
+
+</div>
